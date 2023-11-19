@@ -1,0 +1,116 @@
+version: "3.1"
+
+stories:
+
+- story: story 1
+  steps:
+    - intent: greet
+    - action: utter_greet
+
+- story: story 2
+  steps:
+    - intent: running
+    - action: utter_info
+
+- story: story 3
+  steps:
+    - intent: hcm
+    - action: utter_sighin
+
+- story: story 4
+  steps:
+    - intent: nt
+    - action: utter_sighin
+
+- story: story 7
+  steps:
+    - intent: dont_sighin
+    - action: utter_dont
+
+- story: story 10
+  steps:
+    - intent: sup_sighin_payment_check
+    - action: utter_sup_sighin_payment_check
+
+
+
+- story: story 8
+  steps:
+    - intent: location_distance_ticketprice
+    - action: utter_location_distance_ticketprice
+    - action: action_location_distance_ticketprice_tracker
+
+- story: story 9
+  steps:
+    - intent: race_rules_and_regulations
+    - action: utter_race_rules_and_regulations
+    - action: action_race_rules_and_regulations_tracker
+
+
+
+- story: story 11
+  steps:
+    - intent: personal_registration
+    - action: utter_personal_registration
+    - action: action_personal_registration_tracker
+
+- story: story 12
+  steps:
+    - intent: sign_up_for_group
+    - action: utter_sign_up_for_group
+    - action: action_sign_up_for_group_tracker
+
+
+- story: story 13
+  steps:
+    - intent: check_payment
+    - action: utter_check_payment
+
+- story: story 14
+  steps:    
+    - intent: transfer
+    - action: utter_transfer
+
+- story: story 15
+  steps:
+    - intent: code_transfer
+    - action: action_check_payment_transfer_tracker
+
+- story: story 16
+  steps:
+    - intent: online_payment
+    - action: utter_online_payment
+    - intent: yes_no
+    - action: utter_yes_no
+# - story: story 15 cancel
+#   steps:
+#     - intent: sup_sighin_payment_check
+#     - action: utter_sup_sighin_payment_check  
+
+- story: story 6
+  steps:
+    - action: utter_sighin
+    - intent: running
+    - action: utter_info
+
+- story: user wants to go back from utter_sighin
+  steps:
+    - intent: back_sighin
+    - action: action_back
+
+- story: story 5
+  steps:
+    - intent: qn
+    - action: utter_qn
+    - intent: supafter
+    - action: utter_supafter
+
+- story: story final 1
+  steps:
+    - intent: search
+    - action: utter_search
+
+- story: story final 2
+  steps:
+    - intent: lib_img
+    - action: utter_lib_img

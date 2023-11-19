@@ -1,0 +1,184 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - xin chào
+    - chào bạn
+    - xin chào
+    - chào bạn
+    - chào buổi sáng
+    - chào buổi tối
+    - moin
+    - xin chào
+    - hãy đi
+    - xin chào bạn
+    - chào buổi sáng
+    - chào buổi tối
+    - chào buổi tối
+
+- intent: goodbye
+  examples: |
+    - buổi tối tốt lành
+    - cuối cùng
+    - tốt lành
+    - tạm biệt
+    - buổi tối tốt lành
+    - tạm biệt
+    - tạm biệt
+    - chúc bạn một ngày vui vẻ
+    - gặp bạn xung quanh
+    - tạm biệt
+    - gặp bạn sau
+
+- intent: affirm
+  examples: |
+    - có
+    - có
+    - đúng vậy
+    - tất nhiên
+    - nghe có vẻ tốt
+    - đúng
+
+- intent: deny
+  examples: |
+    - không
+    - không
+    - không bao giờ
+    - tôi không nghĩ vậy
+    - tôi không thích vậy
+    - không thể
+    - không thực sự
+
+- intent: mood_great
+  examples: |
+    - hoàn hảo
+    - tuyệt vời
+    - tuyệt
+    - cảm giác như vua
+    - tuyệt vời
+    - tôi cảm thấy rất tốt
+    - tôi tốt
+    - tôi tuyệt vời
+    - tôi sẽ cứu thế giới
+    - rất phấn khích
+    - cực kỳ tốt
+    - hoàn toàn hoàn hảo
+    - quá tốt
+    - quá hoàn hảo
+
+- intent: mood_unhappy
+  examples: |
+    - ngày của tôi rất tồi tệ
+    - tôi buồn
+    - tôi không cảm thấy rất tốt
+    - tôi thất vọng
+    - rất buồn
+    - tôi rất buồn
+    - buồn
+    - rất buồn
+    - không vui
+    - không tốt
+    - không khá
+    - rất buồn
+    - quá buồn
+    - quá khó khăn
+
+- intent: bot_challenge
+  examples: |
+    - bạn có phải là bot không?
+    - bạn có phải con người không?
+    - tôi đang nói chuyện với bot à?
+    - tôi đang nói chuyện với con người à?
+
+- intent: running
+  examples: |
+    - thông tin về giải chạy?
+    - giải chạy
+    - tình hình giải chạy hiện tại?
+    - thông tin giải chạy?
+
+- intent: hcm
+  examples: |
+    - RUN HCM MIDNIGHT
+
+- intent: nt
+  examples: |
+    - Run NHA TRANG
+
+- intent: qn
+  examples: |
+    - RUN QUY NHON
+
+- intent: dont_sighin
+  examples: |
+    - Chưa, Tôi cần tìm hiểu thông tin
+
+- intent: sup_sighin_payment_check
+  examples: |
+    - Hỗ trợ đăng kí, kiểm tra thanh toán
+
+- intent: back_1
+  examples: |
+    - Quay lại để chọn giải khác
+
+- intent: race_rules_and_regulations
+  examples: |
+    - Quy tắc và điều lệ giải,Size áo, vật phẩm racekit
+
+- intent: location_distance_ticketprice
+  examples: |
+    - Địa điểm tổ chức giải, Cự ly, giá vé & giai đoạn bán vé
+
+- intent: back_signin
+  examples: |
+    - quay lại sigh in
+
+
+- intent: personal_registration
+  examples: |
+    - Đăng kí cá nhân
+- intent: sign_up_for_group
+  examples: |
+    - Đăng kí nhóm
+- intent: check_payment
+  examples: |
+    - Kiểm tra thanh toán
+
+- intent: transfer
+  examples: |
+    - Chuyển khoản
+
+- intent: online_payment
+  examples: |
+    - Thanh toán online
+
+- intent: code_transfer
+  examples: |
+    - [ABC1234S56](payment_code)
+    - [DEF5678R90](payment_code)
+    - [GHI9012N34](payment_code)
+    - [JKL0345B67](payment_code)
+    - [MNO8901R23](payment_code)
+    - [PQR7890X12](payment_code)
+    - [STU6789B01](payment_code)
+    - [VWX5678F90](payment_code)
+    - [YZL0345G67](payment_code)
+
+- intent: yes_no
+  examples: |
+    - Đã bị trừ tiền
+    - Chưa bị trừ tiền
+
+
+- intent: supafter
+  examples: |
+    - Hỗ trợ sau giải chạy
+
+- intent: search
+  examples: |
+    - Tra cứu kết quả, thành tích
+
+- intent: lib_img
+  examples: |
+    - Thư viện ảnh

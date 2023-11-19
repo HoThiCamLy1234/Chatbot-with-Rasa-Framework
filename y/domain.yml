@@ -1,0 +1,182 @@
+version: "3.1"
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - running
+  - hcm
+  - nt
+  - qn
+  - dont_sighin
+  - sup_sighin_payment_check
+  - location_distance_ticketprice
+  - race_rules_and_regulations
+  - back_sighin
+  - personal_registration
+  - sign_up_for_group
+  - check_payment
+  - online_payment
+  - transfer
+  - code_transfer
+  - yes_no
+  - supafter
+  - search
+  - lib_img
+
+
+slots:
+  current_action:
+    type: text
+    mappings:
+      - type: custom
+        from_entity: entity_name
+      
+entities:
+  - payment_code
+
+
+responses:
+  utter_greet_user:
+  - text: "Xin chào, Chào mừng bạn đến với nhóm này! Tôi là RasaBot, người trợ giúp thân thiện của bạn. Tôi có thể giúp gì cho bạn hôm nay?"
+
+  utter_greet:
+  - text: "Chào bạn! Bạn muốn tìm kiếm gì?"
+    buttons:
+    - title: "thông tin giải chạy?"
+      payload: "/running"
+
+  utter_info:
+  - text: "vui lòng chọn giải chạy hổ trợ?"
+    buttons:
+    - title: "RUN HCM MIDNIGHT"
+      payload: "/hcm"
+    - title: "Run NHA TRANG"
+      payload: "/nt"
+    - title: "RUN QUY NHON"
+      payload: "/qn"
+
+  utter_sighin:
+  - text: "Bạn đã thực hiện đăng kí giải chạy chưa?"
+    buttons:
+    - title: "Chưa, Tôi cần tìm hiểu thông tin"
+      payload: "/dont_sighin"
+    - title: "Hỗ trợ đăng kí, kiểm tra thanh toán"
+      payload: "/sup_sighin_payment_check"
+    - title: "Quay lại để chọn giải khác"
+      payload: "/running"
+
+  utter_dont:
+    - text: "Bạn quan tâm đến thông tin:"
+      buttons:
+      - title: "Địa điểm tổ chức giải, Cự ly, giá vé & giai đoạn bán vé"
+        payload: "/location_distance_ticketprice"
+      - title: "Quy tắc và điều lệ giải,Size áo, vật phẩm racekit"
+        payload: "/race_rules_and_regulations"
+      - title: "Quay lại để xem nội dung khác"
+        payload: "/back_sighin"
+
+  utter_sup_sighin_payment_check:
+  - text: Bạn lựa chọn hình thức đăng kí mà bạn cần hỗ trợ ở dưới đây để được hỗ trợ
+    buttons:
+    - title: "Đăng kí cá nhân"
+      payload: "/personal_registration"
+    - title: "Đăng kí nhóm"
+      payload: "/sign_up_for_group"
+    - title: "Kiểm tra thanh toán"
+      payload: "/check_payment" 
+    - title: "Quay lại để xem nội dung khác"
+      payload: "/back_sighin"
+
+  utter_race_rules_and_regulations:
+    - text: "Đây là thông tin về quy tắc, điều lệ, size áo, racekit mà bạn cần:"
+
+  utter_location_distance_ticketprice:
+    - text: "Đây là thông tin về địa điểm, cự ly, giá vé, giai đoạn bán vé mà bạn cần:"
+
+  utter_personal_registration:
+    - text: "Để thực hiện đăng kí cá nhân, bạn truy cập website:"
+
+  utter_sign_up_for_group:
+    - text: "Để thực hiện đăng kí nhóm, bạn truy cập website:"
+
+  utter_check_payment:
+    - text: "Để kiểm tra trang thái thanh toán, hãy lựa chọn hình thức thanh toán mà bạn đã thực hiện dưới đây nhé"
+      buttons:
+      - title: "Chuyển khoản"
+        payload: "/transfer"
+      - title: "Thanh toán online"
+        payload: "/online_payment"
+  utter_transfer:
+    - text: "Bạn vui lòng cung cấp mã thanh toán. Mã thanh toán được gửi cho bạn trong email hướng dẫn chuyển khoản từ hệ thống bắt đầu bằng HCM2023U(cho đang kí cá nhân) và HCM2023G(cho đăng kí nhóm)"
+      buttons:
+      - title: "Hủy bỏ"
+        payload: "/sup_sighin_payment_check"
+
+  utter_online_payment:
+    - text: "Tài khoản của bạn đã bị trừ tiền chưa?"
+      buttons:
+      - title: "Đã bị trừ tiền"
+        payload: "/yes_no"
+      - title: "Chưa bị trừ tiền"
+        payload: "/yes_no"
+
+  utter_yes_no:
+    - text: "Vui lòng thực hiện đăng kí lại sau 30 phút, khuyến mại của bạn(nếu có) sẽ được tự động thiết lập lại sau thời gian này."
+
+  utter_qn:
+    - text: "Cảm ơn bạn đã đồng hành cùng  giải chạy LYNA RUNNING 2023. Vui lòng chọn vấn đề dưới đây để admin hỗ trợ giúp bạn nhé"
+      buttons:
+        - title: "Hỗ trợ sau giải chạy"
+          payload: "/supafter"
+
+  utter_supafter:
+    - text: "Vận động viên vui lòng chọn các hạng mục sau để được hỗ trợ tự động"
+      buttons:
+      - title: "Tra cứu kết quả, thành tích"
+        payload: "/search"
+      - title: "Thư viện ảnh"
+        payload: "/lib_img"
+      - title: "Quay lại để xem giải chạy khác"
+        payload: "/running"
+
+  utter_search:
+    - text: "Bạn vui lòng truy cập website.(http://trangtimkiem.com)"
+
+
+  utter_lib_img:
+    - text: "Bạn vui lòng truy cập website.(http://thuvienanh.com)"
+    
+  utter_cheer_up:
+  - text: "Dưới đây là điều gì đó để làm bạn vui lên:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Có giúp ích cho bạn không?"
+
+  utter_happy:
+  - text: "Tốt lắm, tiếp tục đi!"
+
+  utter_goodbye:
+  - text: "Tạm biệt"
+
+  utter_iamabot:
+  - text: "Tôi là một con bot, được cung cấp bởi Rasa."
+
+actions:
+  - action_greet_user
+  - action_location_distance_ticketprice_tracker
+  - action_race_rules_and_regulations_tracker
+  - action_back
+  - action_check_payment_transfer_tracker
+  - action_personal_registration_tracker
+  - action_sign_up_for_group_tracker
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,58 @@
+version: "3.1"
+
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - covid
+  - corona_state
+
+slots:
+  state:
+    type: any
+    mappings:
+      - type: custom
+        from_entity: entity_name
+
+
+responses:
+  utter_greet_user:
+  - text: "Xin chào, Chào mừng bạn đến với nhóm này! Tôi là RasaBot, người trợ giúp thân thiện của bạn. Tôi có thể giúp gì cho bạn hôm nay?"
+
+  utter_greet:
+  - text: "Chào bạn! Bạn muốn tìm kiếm gì?"
+
+  utter_covid:
+  - text: "Thông tin về corona ở tỉnh nào bạn muốn kiểm tra?"
+
+  utter_corona_state:
+    - text: "Tổng số ca của tỉnh này là"
+
+  utter_cheer_up:
+  - text: "Dưới đây là điều gì đó để làm bạn vui lên:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Có giúp ích cho bạn không?"
+
+  utter_happy:
+  - text: "Tốt lắm, tiếp tục đi!"
+
+  utter_goodbye:
+  - text: "Tạm biệt"
+
+  utter_iamabot:
+  - text: "Tôi là một con bot, được cung cấp bởi Rasa."
+
+actions:
+  - action_greet_user
+  - action_corona_tracker
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
